@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevToolkit Pro | Free Formatting & Conversion Tools</title>
+    <meta name="description" content="Free online developer tools: JSON Formatter, Markdown Converter, Base64 Encoder/Decoder.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="ad-banner top-ad">
+        <span class="ad-label">Advertisement</span>
+        <!-- Insert Google AdSense / Header Ad code here -->
+        <div class="ad-placeholder-text">728 x 90 Leaderboard Ad</div>
+    </div>
+
+    <header class="glass-header">
+        <h1>DevToolkit <span class="accent">Pro</span></h1>
+        <p>Free utility tools for developers. Fast, secure, and beautiful.</p>
+    </header>
+
+    <div class="main-layout">
+        <aside class="sidebar-ad left-ad">
+            <span class="ad-label">Advertisement</span>
+            <!-- Insert Vertical Ad code here -->
+            <div class="ad-placeholder-text">160 x 600 Skyscraper</div>
+        </aside>
+
+        <main class="content-area">
+            <div class="tool-selector">
+                <button class="tool-btn active" data-tool="json">JSON Formatter</button>
+                <button class="tool-btn" data-tool="markdown">Markdown to HTML</button>
+                <button class="tool-btn" data-tool="base64">Base64 Encode/Decode</button>
+            </div>
+
+            <div class="tool-container glass-panel">
+                <div id="json-tool" class="tool-section active">
+                    <h2>JSON Formatter & Validator</h2>
+                    <div class="editor-split">
+                        <textarea id="json-input" placeholder="Paste your raw JSON here..."></textarea>
+                        <div class="action-bar vertical">
+                            <button onclick="formatJson()">Format &rarr;</button>
+                        </div>
+                        <textarea id="json-output" readonly placeholder="Formatted JSON will appear here..."></textarea>
+                    </div>
+                </div>
+
+                <div id="markdown-tool" class="tool-section">
+                    <h2>Markdown to HTML Converter</h2>
+                    <div class="editor-split">
+                        <textarea id="md-input" placeholder="Type Markdown here..."></textarea>
+                        <div class="action-bar vertical">
+                            <button onclick="convertMarkdown()">Convert &rarr;</button>
+                        </div>
+                        <div id="md-output" class="preview-area placeholder-text">HTML Preview will appear here...</div>
+                    </div>
+                </div>
+
+                <div id="base64-tool" class="tool-section">
+                    <h2>Base64 Encoder / Decoder</h2>
+                    <div class="editor-split">
+                        <textarea id="b64-input" placeholder="Enter text or Base64 string..."></textarea>
+                        <div class="action-bar vertical">
+                            <button onclick="processBase64('encode')">Encode &rarr;</button>
+                            <button onclick="processBase64('decode')" class="secondary">Decode &rarr;</button>
+                        </div>
+                        <textarea id="b64-output" readonly placeholder="Resulting string..."></textarea>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="sidebar-ad right-ad">
+            <span class="ad-label">Advertisement</span>
+            <!-- Insert Vertical Ad code here -->
+            <div class="ad-placeholder-text">160 x 600 Skyscraper</div>
+        </aside>
+    </div>
+
+    <div class="ad-banner bottom-ad">
+        <span class="ad-label">Advertisement</span>
+        <!-- Insert Footer Ad code here -->
+        <div class="ad-placeholder-text">728 x 90 Leaderboard Ad</div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 DevToolkit Pro. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
