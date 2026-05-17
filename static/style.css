@@ -163,7 +163,7 @@ button.secondary:hover { background: rgba(255, 255, 255, 0.2); }
 .ad-banner {
     width: 100%;
     max-width: 728px;
-    height: 90px;
+    min-height: 90px;
     background: var(--ad-bg);
     border: 1px dashed var(--panel-border);
     margin: 1.5rem 0;
@@ -213,4 +213,11 @@ footer {
     textarea, .preview-area { height: 250px; }
     .action-bar.vertical { flex-direction: row; }
     .sidebar-ad { display: none; }
+}
+
+@media (max-width: 600px) {
+    h1 { font-size: 1.8rem; }
+    .tool-selector { flex-direction: column; }
+    .tool-btn { text-align: center; }
+    .glass-panel { padding: 1.5rem 1rem; }
 }
